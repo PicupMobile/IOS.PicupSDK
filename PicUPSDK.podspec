@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
     s.dependency 'Alamofire', '4.9.1'
     
     # 8
-    #s.source_files  = 'Sources/**/*.{swift}'
+    s.source_files  = 'Sources/**/*.{swift}'
     s.ios.vendored_frameworks = 'PicUPSDK.framework'
     s.exclude_files = "Sources"
     # 9
