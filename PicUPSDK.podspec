@@ -28,10 +28,10 @@ Pod::Spec.new do |s|
     
     # 8
     s.source_files  = 'Sources/**/*.{swift}'
-    s.ios.vendored_frameworks = 'PicUPSDK.framework'
-    s.exclude_files = "Sources"
+    #s.ios.vendored_frameworks = 'PicUPSDK.framework'
+#    s.exclude_files = "Sources"
     # 9
-    #s.resources = "PicUP-Pod/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
+    s.resources = "IOS.PicupSDK/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
     
     # 10
     s.swift_version = "5.0"
