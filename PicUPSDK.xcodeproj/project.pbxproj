@@ -8,25 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0EE30BB6AF16542AA3ED9218 /* Pods_PicUPSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5938CA0961D3BA049BE6C1E8 /* Pods_PicUPSDK.framework */; };
-		4553B2F4238BDB2B00BF1019 /* SessionToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4553B2EB238BDB2B00BF1019 /* SessionToken.swift */; };
-		4553B2F5238BDB2B00BF1019 /* ClientDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4553B2EC238BDB2B00BF1019 /* ClientDevice.swift */; };
-		4553B2F6238BDB2B00BF1019 /* MessageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4553B2ED238BDB2B00BF1019 /* MessageData.swift */; };
-		4553B2F7238BDB2B00BF1019 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4553B2EE238BDB2B00BF1019 /* Status.swift */; };
-		4553B2F8238BDB2B00BF1019 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4553B2F1238BDB2B00BF1019 /* NetworkService.swift */; };
-		4553B2F9238BDB2B00BF1019 /* SDKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4553B2F2238BDB2B00BF1019 /* SDKService.swift */; };
-		4553B2FA238BDB2B00BF1019 /* CNWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4553B2F3238BDB2B00BF1019 /* CNWorker.swift */; };
 		4553B2FC238BE01A00BF1019 /* PicUPSDK.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 4553B2FB238BE01A00BF1019 /* PicUPSDK.podspec */; };
 		8452B1FD238B544D00302C4A /* PicUPSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 8452B1FB238B544D00302C4A /* PicUPSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4553B2EB238BDB2B00BF1019 /* SessionToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionToken.swift; sourceTree = "<group>"; };
-		4553B2EC238BDB2B00BF1019 /* ClientDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientDevice.swift; sourceTree = "<group>"; };
-		4553B2ED238BDB2B00BF1019 /* MessageData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageData.swift; sourceTree = "<group>"; };
-		4553B2EE238BDB2B00BF1019 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
-		4553B2F1238BDB2B00BF1019 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		4553B2F2238BDB2B00BF1019 /* SDKService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDKService.swift; sourceTree = "<group>"; };
-		4553B2F3238BDB2B00BF1019 /* CNWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CNWorker.swift; sourceTree = "<group>"; };
 		4553B2FB238BE01A00BF1019 /* PicUPSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = PicUPSDK.podspec; sourceTree = "<group>"; };
 		5938CA0961D3BA049BE6C1E8 /* Pods_PicUPSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PicUPSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8452B1F8238B544D00302C4A /* PicUPSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PicUPSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,35 +42,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4553B2EA238BDB2B00BF1019 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				4553B2EB238BDB2B00BF1019 /* SessionToken.swift */,
-				4553B2EC238BDB2B00BF1019 /* ClientDevice.swift */,
-				4553B2ED238BDB2B00BF1019 /* MessageData.swift */,
-				4553B2EE238BDB2B00BF1019 /* Status.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		4553B2EF238BDB2B00BF1019 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				4553B2F0238BDB2B00BF1019 /* Network */,
-				4553B2F2238BDB2B00BF1019 /* SDKService.swift */,
-				4553B2F3238BDB2B00BF1019 /* CNWorker.swift */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		4553B2F0238BDB2B00BF1019 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				4553B2F1238BDB2B00BF1019 /* NetworkService.swift */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
 		4553B2FD238BE3E100BF1019 /* PicUPSDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				4553B2FD238BE3E100BF1019 /* PicUPSDK */,
-				8452B1FA238B544D00302C4A /* Sources */,
 				8452B1F9238B544D00302C4A /* Products */,
 				8FEBE0A485F45A9D1C32F57A /* Pods */,
 				06EF035A2C3C7942E0D3C806 /* Frameworks */,
@@ -112,15 +68,6 @@
 				8452B1F8238B544D00302C4A /* PicUPSDK.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		8452B1FA238B544D00302C4A /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				4553B2EA238BDB2B00BF1019 /* Models */,
-				4553B2EF238BDB2B00BF1019 /* Services */,
-			);
-			path = Sources;
 			sourceTree = "<group>";
 		};
 		8FEBE0A485F45A9D1C32F57A /* Pods */ = {
@@ -238,13 +185,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4553B2F8238BDB2B00BF1019 /* NetworkService.swift in Sources */,
-				4553B2F5238BDB2B00BF1019 /* ClientDevice.swift in Sources */,
-				4553B2F6238BDB2B00BF1019 /* MessageData.swift in Sources */,
-				4553B2F4238BDB2B00BF1019 /* SessionToken.swift in Sources */,
-				4553B2F9238BDB2B00BF1019 /* SDKService.swift in Sources */,
-				4553B2FA238BDB2B00BF1019 /* CNWorker.swift in Sources */,
-				4553B2F7238BDB2B00BF1019 /* Status.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
