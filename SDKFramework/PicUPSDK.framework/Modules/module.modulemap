@@ -1,0 +1,11 @@
+framework module PicUPSDK {
+  umbrella header "PicUPSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module PicUPSDK.Swift {
+    header "PicUPSDK-Swift.h"
+    requires objc
+}

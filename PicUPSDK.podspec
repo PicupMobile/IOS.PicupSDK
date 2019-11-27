@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
     s.requires_arc = true
     
     # 2
-    s.version = "1.0.7"
+    s.version = "1.0.8"
     
     # 3
     s.license = { :type => 'MIT', :file => 'LICENSE' }
@@ -27,9 +27,10 @@ Pod::Spec.new do |s|
     s.dependency 'Alamofire', '4.9.1'
     
     # 8
-    s.source_files  = 'Sources/**/*.{swift}'
-    #s.ios.vendored_frameworks = 'PicUPSDK.framework'
-#    s.exclude_files = "Sources"
+    s.public_header_files = "SDKFramework/PicUPSDK.framework/Headers/*.h"
+    s.source_files = "SDKFramework/PicUPSDK.framework/Headers/*.h"
+    s.vendored_frameworks = "SDKFramework/PicUPSDK.framework"
+    
     # 9
     s.resources = "IOS.PicupSDK/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
     
