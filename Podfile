@@ -1,6 +1,8 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '12.0'
 
+source 'https://github.com/CocoaPods/Specs.git'
+
 inhibit_all_warnings!
 use_frameworks!
 

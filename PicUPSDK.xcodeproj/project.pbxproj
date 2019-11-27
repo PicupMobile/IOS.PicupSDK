@@ -6,6 +6,20 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		45869969238ED05D009C36C1 /* UniversalSDK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 4586996C238ED05D009C36C1 /* Build configuration list for PBXAggregateTarget "UniversalSDK" */;
+			buildPhases = (
+				4586996D238ED063009C36C1 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = UniversalSDK;
+			productName = UniversalSDK;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		0EE30BB6AF16542AA3ED9218 /* Pods_PicUPSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5938CA0961D3BA049BE6C1E8 /* Pods_PicUPSDK.framework */; };
 		4553B2F4238BDB2B00BF1019 /* SessionToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4553B2EB238BDB2B00BF1019 /* SessionToken.swift */; };
@@ -174,6 +188,9 @@
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = ItWorksinUA;
 				TargetAttributes = {
+					45869969238ED05D009C36C1 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
 					8452B1F7238B544D00302C4A = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
@@ -193,6 +210,7 @@
 			projectRoot = "";
 			targets = (
 				8452B1F7238B544D00302C4A /* PicUPSDK */,
+				45869969238ED05D009C36C1 /* UniversalSDK */,
 			);
 		};
 /* End PBXProject section */
@@ -209,6 +227,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4586996D238ED063009C36C1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "######################\n# Options\n######################\n\nREVEAL_ARCHIVE_IN_FINDER=true\n\nFRAMEWORK_NAME=\"PicUPSDK\"\n\nFRAMEWORK_SCHEME=\"PicUPSDK\"\n\nWORKSPACE=\"${PROJECT_NAME}.xcworkspace\"\n\nSIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${FRAMEWORK_NAME}.framework\"\n\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${FRAMEWORK_NAME}.framework\"\n\nUNIVERSAL_LIBRARY_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal\"\n\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${FRAMEWORK_NAME}.framework\"\n\n\n######################\n# Build Frameworks\n######################\n\nfor V in ${BUILD_VARIANTS}; do\n    for A in ${ARCHS}; do\n        unset SWIFT_RESPONSE_FILE_PATH_${V}_${A}\n    done\ndone\n\nxcodebuild -workspace \"${WORKSPACE}\" -scheme \"${FRAMEWORK_SCHEME}\" -sdk iphonesimulator -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphonesimulator 2>&1 -UseModernBuildSystem=NO\n\n\nxcodebuild -workspace \"${WORKSPACE}\" -scheme \"${FRAMEWORK_SCHEME}\" -sdk iphoneos -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphoneos 2>&1 -UseModernBuildSystem=NO\n\n######################\n# Create directory for universal\n######################\n\nrm -rf \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${FRAMEWORK}\"\n\n\n######################\n# Copy files Framework\n######################\n\ncp -r \"${DEVICE_LIBRARY_PATH}/.\" \"${FRAMEWORK}\"\n\n\n######################\n# Make an universal binary\n######################\n\nlipo \"${SIMULATOR_LIBRARY_PATH}/${FRAMEWORK_NAME}\" \"${DEVICE_LIBRARY_PATH}/${FRAMEWORK_NAME}\" -create -output \"${FRAMEWORK}/${FRAMEWORK_NAME}\" | echo\n\n# For Swift framework, Swiftmodule needs to be copied in the universal framework\nif [ -d \"${SIMULATOR_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" ]; then\ncp -f ${SIMULATOR_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/* \"${FRAMEWORK}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" | echo\nfi\n\nif [ -d \"${DEVICE_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" ]; then\ncp -f ${DEVICE_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/* \"${FRAMEWORK}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" | echo\nfi\n\n######################\n# On Release, copy the result to release directory\n######################\nOUTPUT_DIR=\"${PROJECT_DIR}/../Universal SDK Framework/\"\n\nrm -rf \"$OUTPUT_DIR\"\nmkdir -p \"$OUTPUT_DIR\"\n\ncp -r \"${FRAMEWORK}\" \"$OUTPUT_DIR\"\n\nif [ ${REVEAL_ARCHIVE_IN_FINDER} = true ]; then\nopen \"${OUTPUT_DIR}/\"\nfi\n";
+		};
 		ADF110AE58DA2A00EA6899AB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -251,6 +286,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		4586996A238ED05D009C36C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4586996B238ED05D009C36C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		8452B1FE238B544D00302C4A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -426,6 +477,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4586996C238ED05D009C36C1 /* Build configuration list for PBXAggregateTarget "UniversalSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4586996A238ED05D009C36C1 /* Debug */,
+				4586996B238ED05D009C36C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8452B1F2238B544C00302C4A /* Build configuration list for PBXProject "PicUPSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
