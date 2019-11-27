@@ -27,12 +27,13 @@ Pod::Spec.new do |s|
     s.dependency 'Alamofire', '4.9.1'
     
     # 8
+#    s.source_files  = 'Sources/**/*.{swift}'
     s.public_header_files = "SDKFramework/PicUPSDK.framework/Headers/*.h"
     s.source_files = "SDKFramework/PicUPSDK.framework/Headers/*.h"
     s.vendored_frameworks = "SDKFramework/PicUPSDK.framework"
     
     # 9
-    s.resources = "IOS.PicupSDK/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
+#    s.resources = "IOS.PicupSDK/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
     
     # 10
     s.swift_version = "5.0"
