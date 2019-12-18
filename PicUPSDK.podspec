@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
     s.requires_arc = true
     
     # 2
-    s.version = "1.0.9"
+    s.version = "1.0.10"
     
     # 3
     s.license = { :type => 'MIT', :file => 'LICENSE' }
@@ -36,6 +36,6 @@ Pod::Spec.new do |s|
 #    s.resources = "IOS.PicupSDK/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
     
     # 10
-    s.swift_version = "5.0"
+    s.swift_version = "4.2"
 end
 
