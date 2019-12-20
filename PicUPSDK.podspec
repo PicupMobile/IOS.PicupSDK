@@ -1,13 +1,13 @@
 Pod::Spec.new do |s|
     # 1
     s.platform = :ios
-    s.ios.deployment_target = '11.0'
+    s.ios.deployment_target = '9.0'
     s.name = "PicUPSDK"
     s.summary = "PicUPSDK"
     s.requires_arc = true
     
     # 2
-    s.version = "1.0.10"
+    s.version = "1.0.11"
     
     # 3
     s.license = { :type => 'MIT', :file => 'LICENSE' }
