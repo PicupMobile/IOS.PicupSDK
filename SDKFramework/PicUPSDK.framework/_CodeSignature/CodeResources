@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		xy4bCUGqsoY84s+ExvMocKgy9wE=
+		mEyJ/a45YQ7QnXz+aQWbQOcoLxQ=
 		</data>
 		<key>Modules/PicUPSDK.swiftmodule/arm.swiftdoc</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Modules/PicUPSDK.swiftmodule/arm.swiftmodule</key>
 		<data>
-		IbHyZJ42MaiX5sHum+8Q6hCIkX0=
+		xrFnv2we2JEqwghFoMzMijohQ2M=
 		</data>
 		<key>Modules/PicUPSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/PicUPSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		6lqKxpcMdBUSpZJoiZbqaFkOuYw=
+		pwFO+gpEdkTs+p/FiiwsrwKXphs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -76,11 +76,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			IbHyZJ42MaiX5sHum+8Q6hCIkX0=
+			xrFnv2we2JEqwghFoMzMijohQ2M=
 			</data>
 			<key>hash2</key>
 			<data>
-			iMDHmbIs3dR9FvYXBwOI5JbgSbBSI6XEBvNPUTJsJ4U=
+			a2DsdLcZG6nUUYL3+Vqkmtmu0PPgSX5Z0HBRy8eM0hc=
 			</data>
 		</dict>
 		<key>Modules/PicUPSDK.swiftmodule/arm64.swiftdoc</key>
@@ -98,11 +98,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6lqKxpcMdBUSpZJoiZbqaFkOuYw=
+			pwFO+gpEdkTs+p/FiiwsrwKXphs=
 			</data>
 			<key>hash2</key>
 			<data>
-			u6Mww6Atu+wNQ0A7SaZyYAKCXaoJnfXkaRdobBZ+zAA=
+			mH3RJ/WgUKAaAvBB9jb5O1sgDcXG1BZAdHUgT4QhYjw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
